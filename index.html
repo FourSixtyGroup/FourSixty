@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home | FourSixty Group</title>
+<meta name="description" content="FourSixty Group designs and builds fast, modern websites for businesses.">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Michroma&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+<!-- Loading screen -->
+<div id="loader" role="status" aria-live="polite">
+  <img src="logo.png" alt="FourSixty Group logo" class="loader-logo">
+  <div class="bar"><span id="barFill"></span></div>
+  <p id="pct">0%</p>
+</div>
+
+<!-- Opening screen -->
+<section id="intro" hidden>
+  <svg class="circuit" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <path d="M0 140 H180 L240 200 H420 L470 150 H800"/>
+    <path d="M0 460 H260 L320 400 H540 L600 460 H800"/>
+    <path d="M120 0 V90 L170 140"/>
+    <path d="M680 600 V520 L620 460"/>
+    <circle cx="470" cy="150" r="6"/><circle cx="320" cy="400" r="6"/><circle cx="600" cy="460" r="6"/>
+  </svg>
+  <img src="logo.png" alt="FourSixty Group" class="intro-logo">
+  <p class="intro-welcome">Welcome</p>
+  <p class="intro-quote">&ldquo;Build it sharp. Build it fast. Build it to be remembered.&rdquo;<cite>FourSixty Group</cite></p>
+
+</section>
+<div id="progress"></div>
+<header id="top">
+  <a href="index.html" class="brand"><span class="mark" aria-hidden="true"></span><span>FourSixty Group</span></a>
+  <button id="menuBtn" aria-label="Open menu" aria-expanded="false">Menu</button>
+  <nav id="nav"><a href="index.html" class="on">Home</a><a href="services.html">Services</a><a href="features.html">Features</a><a href="process.html">Process</a><a href="packages.html">Packages</a><a href="faq.html">FAQ</a><a href="contact.html" class="btn small">Start a project</a></nav>
+</header>
+<main>
+<section id="home" class="hero">
+    <svg class="circuit" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <path d="M0 520 H200 L260 460 H520 L580 520 H800"/>
+      <path d="M800 90 H600 L540 150 H300 L240 90 H0"/>
+      <circle cx="260" cy="460" r="6"/><circle cx="540" cy="150" r="6"/>
+    </svg>
+    <h1>We build websites<br>your clients remember.</h1>
+    <p class="lead">FourSixty Group designs and develops fast, clean, mobile-first websites for businesses that want to look sharp and get found.</p>
+    <div class="row">
+      <a href="#contact" class="btn">Start a project</a>
+      <a href="#packages" class="btn ghost">See packages</a>
+    </div>
+  </section>
+  <section class="wrap alt"><h2>Explore</h2><div class="grid three">
+    <a class="card" href="services.html"><h3>Services</h3><p>The websites we build for businesses.</p></a>
+    <a class="card" href="packages.html"><h3>Packages</h3><p>Pick the size that fits your project.</p></a>
+    <a class="card" href="process.html"><h3>Process</h3><p>See how a project runs, start to launch.</p></a>
+  </div></section><section  class="contact">
+    <h2>Ready to build?</h2>
+    <p class="lead">Message us on Instagram and tell us about your project.</p>
+    <a class="btn" href="https://www.instagram.com/foursixty_group?stkn=OHh6cGZsOG16aTJj" target="_blank" rel="noopener">Message @foursixty_group</a>
+  </section>
+</main>
+<footer>
+  <span>&copy; <span id="yr"></span> FourSixty Group</span>
+  <a href="index.html">Home</a>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
