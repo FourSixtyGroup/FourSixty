@@ -1,43 +1,20 @@
 (function () {
   var body = document.body;
-  var loader = document.getElementById('loader');
   var intro = document.getElementById('intro');
 
-  // Loading + opening screens (home page, first visit of the session only)
+  // Opening (welcome) screen - home page, first visit of the session only
   var seen = false;
   try { seen = sessionStorage.getItem('fs-seen') === '1'; } catch (e) {}
-  if (loader && intro) {
+  if (intro) {
     if (seen) {
-      loader.remove(); intro.remove(); body.classList.remove('locked');
+      intro.remove(); body.classList.remove('locked');
     } else {
-      var fill = document.getElementById('barFill');
-      var pct = document.getElementById('pct');
-      var progress = 0, loaded = false;
-      var setProgress = function (v) {
-        progress = v;
-        fill.style.width = v + '%';
-        pct.textContent = Math.round(v) + '%';
-      };
-      var tick = setInterval(function () {
-        if (!loaded && progress < 90) setProgress(progress + (90 - progress) * 0.08 + 0.4);
-      }, 80);
-      var finishLoading = function () {
-        loaded = true; clearInterval(tick); setProgress(100);
-        setTimeout(function () {
-          loader.classList.add('out');
-          intro.hidden = false;
-          setTimeout(enterSite, 5200);
-          setTimeout(function () { loader.remove(); }, 800);
-        }, 500);
-      };
-      if (document.readyState === 'complete') finishLoading();
-      else window.addEventListener('load', finishLoading);
-      var enterSite = function () {
+      setTimeout(function () {
         try { sessionStorage.setItem('fs-seen', '1'); } catch (e) {}
         intro.classList.add('out');
         body.classList.remove('locked');
         setTimeout(function () { intro.remove(); }, 800);
-      };
+      }, 5200);
     }
   }
 
