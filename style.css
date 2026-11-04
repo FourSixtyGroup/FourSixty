@@ -220,3 +220,11 @@ header:hover{transform:none}
 .goo{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0;filter:url(#gooF);transition:opacity .6s}
 .goo.on{opacity:.4}
 .goo b{position:absolute;left:0;top:0;border-radius:50%;background:var(--blue);will-change:transform}
+
+/* Brand additions */
+.tagline{margin:1.2rem 0 0;color:#fff;font:700 1.05rem var(--body);letter-spacing:.03em}
+.hero .tagline+.lead{margin-top:.8rem}
+.lead strong{color:#fff}
+.svc{display:flex;flex-direction:column}
+.svc p{flex:1}
+.svc .btn{margin-top:1.3rem;align-self:flex-start}
